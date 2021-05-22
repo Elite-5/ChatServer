@@ -1,6 +1,10 @@
 package chatserver;
 
 import java.net.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.Timer;
 
 import java.io.*;
 import java.awt.event.*;
@@ -35,6 +39,7 @@ class chi implements Runnable {
 		});
 		t = new Thread(this);
 		t.start();
+		
 	}
 
 	public void run() {
@@ -46,6 +51,16 @@ class chi implements Runnable {
 			br = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			name = br.readLine();
 			f.text.append("Connected" + "\n");
+			Timer tt=new Timer(1000,new ActionListener() {
+				public void actionPerformed(ActionEvent ee) {
+				try {
+					pw = new PrintWriter(s.getOutputStream(), true);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				pw.println("");}
+			});
+			tt.start();
 			while (true) {
 				try {
 					br = new BufferedReader(new InputStreamReader(s.getInputStream()));
@@ -66,6 +81,7 @@ class chi implements Runnable {
 							i += 1;
 						}
 					}
+				
 				} catch (Exception ee) {
 				}
 			}
