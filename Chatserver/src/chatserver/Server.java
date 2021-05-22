@@ -31,7 +31,9 @@ class msg implements Runnable {
 				LocalDateTime now = LocalDateTime.now();
 				String date = String.valueOf(dtf.format(now));
 				br = new BufferedReader(new InputStreamReader(s.getInputStream()));
-			f.text.append(s1 + "......." + br.readLine() + "(" + date + ")" + "\n");
+				String string1=br.readLine();
+				if (string1.compareTo("")!=0)
+			    f.text.append(s1 + "......." + string1+ "(" + date + ")" + "\n");
 				PrintWriter pw = new PrintWriter(s.getOutputStream(), true);
 				String string = f.text.getText();
 				string = string.replace(".......", "!@#");
@@ -113,6 +115,6 @@ public class Server {
 	}
 
 	public static void main(String[] args) {
-		Server sss=new Server("localhost", "Server");
+		new Server("localhost", "Server");
 	}
 }
