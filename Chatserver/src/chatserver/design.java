@@ -158,7 +158,8 @@ public class design extends JFrame  {
 		btnNewButton2.setFont(new Font("Arial Narrow", Font.BOLD, 16));
 		btnNewButton2.setBounds(150, 80, 150, 23);
 		contentPane.add(btnNewButton2);
-		
+		entry_decry ed=new entry_decry(id);
+		id=ed.convert();
 		JLabel lblNewLabel_1 = new JLabel("Meeting ID - "+id);
 		lblNewLabel_1.setBounds(34, 0, 365, 25);
 		contentPane.add(lblNewLabel_1);
