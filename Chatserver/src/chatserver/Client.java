@@ -46,6 +46,8 @@ class chi implements Runnable {
 	public void run() {
 		try {
 			f.text.append("Not Connected" + "\n");
+			entry_decry ed=new entry_decry(st);
+			st=ed.convert();
 			s = new Socket(st, 2002);
 			f.btnNewButton_4.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent ee) {
