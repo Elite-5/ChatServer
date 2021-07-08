@@ -1,3 +1,3 @@
 # ChatServer
 
-Our main objective was to creat a lan messenger an easy to use  lan messaging application .for safe secure and  intraoffice communication. External users cant use the lan . the office chat will be more secure in lan chat messenger .  than public messenger. We also ensure that the privacy of people is not compromised by not saving there messages.  Anonymous chatting is  not allowed. 
+Looking at the global scenario, In today’s time privacy is of utmost importance. For official works so Many people fear that certain apps hinder privacy while conversation. We planned our project by Keeping in mind to develop a software which will allow users to chat without hindering their privacy. Our main objective was to create a LAN messenger an easy-to-use LAN messaging application for safe secure and intraoffice communication. The office chat will be more secure in LAN chat messenger than public messenger.
