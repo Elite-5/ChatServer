@@ -16,8 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.Timer;
 
 class Servertra implements Runnable{//for recieving files over connection.
-	String a;
-	int ch;
+	String a; //ip
+	int ch; //forum or private
 	public servertransfer set;
 	Servertra(String a,int ch){
 		this.a=a;
